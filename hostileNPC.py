@@ -19,16 +19,16 @@ class HostileNPC(pygame.sprite.Sprite):
         self.alive = True;
         self.health = health
         self.speed = speed
-        self.xv, self yv. = random.randrange(0, 10), random.randrange(0, 10)
+        self.xv, self.yv = random.randrange(0, 10), random.randrange(0, 10)
         
-
+    def take_damage(self, damage)
+        self.health -= damage;
 
     def update(self):
         x, y = self.fPos
         x += self.xv
         y += self.yv
         self.fPos = x, y
-        self.health -= damage;
         if(self.health == 0):
             self.alive = False;
         self.pos  = int(self.fPos[0]), int(self.fPos[1])
